@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic-settings
+slowapi
+httpx
+aiofiles
+python-multipart
+yt-dlp
