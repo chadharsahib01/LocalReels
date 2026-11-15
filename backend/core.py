@@ -24,7 +24,7 @@ MEDIA = Path(os.environ.get("LOCALREELS_MEDIA_DIR") or (ROOT / "media")).resolve
 MEDIA.mkdir(parents=True, exist_ok=True)
 DB_PATH = ROOT / "localreels.db"
 VIDEO_EXTS = {".mp4", ".webm", ".mkv", ".mov", ".m4v", ".avi", ".flv", ".ts"}
-AUTH_SECRET = os.environ.get("LOCALREELS_AUTH", "nayi_app_secret_123")
+AUTH_SECRET = os.environ.get("LOCALREELS_AUTH", "")
 OLD_ROOT = Path(os.environ.get("LOCALREELS_OLD_ROOT") or r"C:\LocalReels")
 
 app = FastAPI(title="LocalReels Core", version="2.1.0")

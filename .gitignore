@@ -16,3 +16,14 @@ Thumbs.db
 .idea/
 _backup/
 .lr_write_test
+
+# --- private data (kabhi commit nahi) ---
+localreels.db
+localreels.db-wal
+localreels.db-shm
+*.sqlite3
+backups/
+data/
+.lr_token
+aspects.json
+aspects.json.migrated

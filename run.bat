@@ -1,19 +1,21 @@
 @echo off
 setlocal EnableExtensions
 cd /d "%~dp0"
-title LocalReels v7
+title LocalReels
 
 set "LOCALREELS_MEDIA_DIR=C:\LocalReels\media"
 set "LOCALREELS_OLD_ROOT=C:\LocalReels"
 set "LOCALREELS_AUTH=nayi_app_secret_123"
 set "LOCALREELS_PORT=8000"
+set "LOCALREELS_THUMB_WORKERS=3"
 
 echo ===============================================
-echo   LocalReels v7
-echo   Media : %LOCALREELS_MEDIA_DIR%   (in-place)
+echo   LocalReels  -  Cinema + Reels
+echo   Media : %LOCALREELS_MEDIA_DIR%
 echo ===============================================
 
 if not exist "%LOCALREELS_MEDIA_DIR%" mkdir "%LOCALREELS_MEDIA_DIR%"
+if not exist "backend" mkdir "backend"
 if exist "venv\Scripts\activate.bat" call "venv\Scripts\activate.bat"
 
 python -m pip install -q -r requirements.txt
